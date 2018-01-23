@@ -1,0 +1,39 @@
+// TypeScript config file that is used to compile the library into ES2015.
+{
+  "compilerOptions": {
+    "declaration": true,
+    "stripInternal": false,
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "newLine": "lf",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "outDir": "../../dist/packages/mat-extra",
+    "rootDir": ".",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es2015",
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true,
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@gnucoop/ng-extra/*": ["../../dist/packages/ng-extra/*"],
+      "@gnucoop/mat-extra/*": ["../../dist/packages/mat-extra/*"]
+    }
+  },
+  "files": [
+    "public-api.ts",
+    "typings.d.ts"
+  ],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "@gnucoop/mat-extra",
+    "skipTemplateCodegen": true,
+    "fullTemplateTypeCheck": true
+  }
+}

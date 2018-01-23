@@ -1,0 +1,1 @@
+Please see the official documentation at https://ng-extra.gnucoop.io/services/geolocation

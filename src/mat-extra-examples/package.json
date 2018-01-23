@@ -1,0 +1,31 @@
+{
+  "name": "@gnucoop/mat-extra-examples",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Mat-Extra Examples",
+  "main": "./bundles/mat-extra-examples.umd.js",
+  "module": "./esm5/mat-extra-examples.es5.js",
+  "es2015": "./esm2015/mat-extra-examples.js",
+  "typings": "./mat-extra-examples.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gnucoop/ng-extra.git"
+  },
+  "keywords": [
+    "angular",
+    "extra",
+    "ionic"
+  ],
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/gnucoop/ng-extra/issues"
+  },
+  "homepage": "https://github.com/angular/ng-extra#readme",
+  "peerDependencies": {
+    "@angular/core": "0.0.0-NG",
+    "@angular/common": "0.0.0-NG",
+    "ionic-angular": "0.0.0-ION"
+  },
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
+}

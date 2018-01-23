@@ -1,0 +1,39 @@
+# Ng-Extra
+/src/ng-extra/*              @trik
+/src/ng-extra/geolocation/*  @trik
+
+# Mat-Extra
+/src/mat-extra/*             @trik
+
+# Ion-Extra
+/src/ion-extra/*             @trik
+
+# Docs examples & guides
+/guides/**                   @trik
+/src/mat-extra-examples/**   @trik
+/src/ion-extra-examples/**   @trik
+
+# Demo app
+/src/demo-app/*              @trik
+/src/demo-app/demo-app/*     @trik
+/src/demo-app/geolocation/** @trik
+
+# E2E app
+/e2e/*                       @trik
+/e2e/util/*                  @trik
+/src/e2e-app/*               @trik
+/src/e2e-app/e2e-app/**      @trik
+
+# Universal app
+/src/universal-app/**        @trik
+
+# Tooling
+/.circleci/**                @trik
+/scripts/**                  @trik
+/test/**                     @trik
+/tools/**                    @trik
+
+# Misc
+/*                           @trik
+/.github/**                  @trik
+/src/*                       @trik

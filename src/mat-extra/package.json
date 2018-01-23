@@ -1,0 +1,32 @@
+{
+  "name": "@gnucoop/mat-extra",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Ng-Extra for Angular Material",
+  "main": "./bundles/mat-extra.umd.js",
+  "module": "./esm5/mat-extra.es5.js",
+  "es2015": "./esm2015/mat-extra.js",
+  "typings": "./mat-extra.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gnucoop/ng-extra.git"
+  },
+  "keywords": [
+    "angular",
+    "extra",
+    "material"
+  ],
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/gnucoop/ng-extra/issues"
+  },
+  "homepage": "https://github.com/angular/ng-extra#readme",
+  "peerDependencies": {
+    "@angular/cdk": "0.0.0-NGM",
+    "@angular/core": "0.0.0-NG",
+    "@angular/common": "0.0.0-NG",
+    "@angular/material": "0.0.0-NGM"
+  },
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
+}

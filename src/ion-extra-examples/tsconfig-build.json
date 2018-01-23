@@ -1,0 +1,38 @@
+// TypeScript config file that is used to compile the library into ES2015.
+{
+  "compilerOptions": {
+    "declaration": true,
+    "stripInternal": false,
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "newLine": "lf",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "outDir": "../../dist/packages/ion-extra-examples",
+    "rootDir": ".",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es2015",
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true,
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@gnucoop/ng-extra/*": ["../../dist/packages/ng-extra/*"],
+      "@gnucoop/ion-extra/*": ["../../dist/packages/ion-extra/*"]
+    }
+  },
+  "files": [
+    "public-api.ts"
+  ],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "@gnucoop/ion-extra-examples",
+    "skipTemplateCodegen": true,
+    "fullTemplateTypeCheck": true
+  }
+}

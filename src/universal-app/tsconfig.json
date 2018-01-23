@@ -1,0 +1,16 @@
+// Configuration for IDEs only.
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "baseUrl": ".",
+    "paths": {
+      "@gnucoop/ng-extra/*": ["../ng-extra/*"],
+      "@gnucoop/mat-extra/*": ["../mat-extra/*"],
+      "@gnucoop/mat-extra": ["../mat-extra/public_api"],
+      "@gnucoop/ion-extra/*": ["../ion-extra/*"],
+      "@gnucoop/ion-extra": ["../ion-extra/public_api"]
+    }
+  },
+  "include": ["./**/*.ts"]
+}

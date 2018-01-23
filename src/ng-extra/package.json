@@ -1,0 +1,29 @@
+{
+  "name": "@gnucoop/ng-extra",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Ng-Extra",
+  "main": "./bundles/ng-extra.umd.js",
+  "module": "./esm5/ng-extra.es5.js",
+  "es2015": "./esm2015/ng-extra.js",
+  "typings": "./ng-extra.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gnucoop/ng-extra.git"
+  },
+  "keywords": [
+    "angular",
+    "extra"
+  ],
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/gnucoop/ng-extra/issues"
+  },
+  "homepage": "https://github.com/angular/ng-extra#readme",
+  "peerDependencies": {
+    "@angular/core": "0.0.0-NG",
+    "@angular/common": "0.0.0-NG"
+  },
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
+}

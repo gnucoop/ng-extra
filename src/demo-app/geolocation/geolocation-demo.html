@@ -1,0 +1,48 @@
+<h1>Geolocation service</h1>
+<ng-container *ngIf="geolocationAvailable; else geolocationNotAvailable">
+  <p>
+    Geolocation available!
+  </p>
+  <h1>Get current location</h1>
+  <section class="demo-section">
+    <p>
+      <button (click)="getPosition()" mat-raised-button
+          [disabled]="positionGet || positionWatch">Get position</button>
+    </p>
+    <p>
+      Current position:
+      <em *ngIf="!currentPosition; else currentCoords">(not set)</em>
+      <ng-template #currentCoords>
+        Latitude: {{ currentPosition.coords.latitude }} -
+        Longitude: {{ currentPosition.coords.longitude }} -
+        Timestamp: {{ currentPosition.timestamp }}
+      </ng-template>
+      <ng-container *ngIf="getPositionError">
+        Error: {{ getPositionError }}
+      </ng-container>
+    </p>
+  </section>
+  <h1>Watch current location</h1>
+  <section class="demo-section">
+    <p>
+      <button *ngIf="!positionWatch" (click)="watchPosition()" mat-raised-button
+          [disabled]="positionGet">Watch position</button>
+      <button *ngIf="positionWatch" (click)="unwatchPosition()"
+          mat-raised-button>Unwatch position</button>
+    </p>
+    <p>
+      Current position:
+      <em *ngIf="!positionWatch || !(watchedPosition|async); else currentWatchCoords">(not set)</em>
+      <ng-template #currentWatchCoords>
+        Latitude: {{ (watchedPosition|async)?.coords.latitude }} -
+        Longitude: {{ (watchedPosition|async)?.coords.longitude }} -
+        Timestamp: {{ (watchedPosition|async)?.timestamp }}
+      </ng-template>
+    </p>
+  </section>
+</ng-container>
+<ng-template #geolocationNotAvailable>
+  <p>
+    Geolocation not available!
+  </p>
+</ng-template>
