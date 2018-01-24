@@ -48,6 +48,7 @@ export class Geolocation {
     return new Observable<Position>(subscriber => {
       if (!this.geolocationAvailable) {
         subscriber.error();
+        return;
       }
       navigator.geolocation.getCurrentPosition(
         position => {
