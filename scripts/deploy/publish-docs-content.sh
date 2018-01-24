@@ -16,7 +16,7 @@ fi
 
 if [[ ! ${*} == *--no-build* ]]; then
   $(npm bin)/gulp mat-extra-examples:build-release:clean
-  $(npm bin)/gulp ion-extra-examples:build-release:clean
+  $(npm bin)/gulp ion-extra-examples:build-release
   $(npm bin)/gulp docs
 fi
 
