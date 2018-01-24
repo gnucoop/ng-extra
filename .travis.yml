@@ -39,7 +39,7 @@ env:
   - LOGS_DIR=/tmp/ng-extra-build/logs
   - SAUCE_USERNAME=gnucoop
   - BROWSER_STACK_USERNAME=andreamariaberto1
-  - BROWSER_STACK_ACCESS_KEY=pHs5SpSyBvUWqa1WzNQh
+  - BROWSER_STACK_ACCESS_KEY=hQNzW1aqWUvBySpS5sHp
   - BROWSER_PROVIDER_READY_FILE=/tmp/ng-extra-build/readyfile
   - BROWSER_PROVIDER_ERROR_FILE=/tmp/ng-extra-build/errorfile
 
