@@ -34,7 +34,8 @@ export class Geolocation {
   readonly geolocationAvailable: boolean;
 
   constructor() {
-    this.geolocationAvailable = navigator != null && navigator.geolocation != null;
+    this.geolocationAvailable = typeof navigator !== 'undefined' &&
+      typeof navigator.geolocation !== 'undefined';
   }
 
   /**
