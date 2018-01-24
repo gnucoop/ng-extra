@@ -37,7 +37,7 @@ export function openScreenshotsBucket() {
   let gcs = cloudStorage({
     projectId: 'ng-extra-screenshots',
     credentials: {
-      client_email: 'firebase-adminsdk-t4209@ng-extra-screenshots.iam.gserviceaccount.com',
+      client_email: 'firebase-adminsdk-3hzwa@ng-extra-screenshots.iam.gserviceaccount.com',
       private_key: decode(process.env['NG_EXTRA_SCREENSHOT_FIREBASE_KEY']!)
     },
   });
