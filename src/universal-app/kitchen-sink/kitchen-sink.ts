@@ -27,7 +27,7 @@ export class KitchenSinkClientModule {
   constructor(geolocation: Geolocation) {
     geolocation.getCurrentPosition()
       .pipe(map((p) => JSON.stringify(p)))
-      .subscribe(console.log);
+      .subscribe(console.log, console.log);
   }
 }
 
