@@ -8,9 +8,9 @@ set -e
 
 cd "$(dirname $0)/../../"
 
-if [ -z ${NX_EXTRA_DOCS_CONTENT_TOKEN} ]; then
+if [ -z ${NG_EXTRA_DOCS_CONTENT_TOKEN} ]; then
   echo "Error: No access token for GitHub could be found." \
-       "Please set the environment variable 'NX_EXTRA_DOCS_CONTENT_TOKEN'."
+       "Please set the environment variable 'NG_EXTRA_DOCS_CONTENT_TOKEN'."
   exit 1
 fi
 
