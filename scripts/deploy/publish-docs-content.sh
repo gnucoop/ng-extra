@@ -53,7 +53,7 @@ git clone ${docsContentRepoUrl} ${docsContentPath} --depth 1
 rm -Rf ${docsContentPath}/*
 
 # Create all folders that need to exist in the docs-content repository.
-mkdir ${docsContentPath}/{overview,guides,api,examples,stackblitz,examples-package}
+mkdir ${docsContentPath}/{overview,guides,api,examples,stackblitz,mat-examples-package,ion-examples-package}
 
 # Copy API and example files to the docs-content repository.
 cp -R ${docsDistPath}/api/* ${docsContentPath}/api
