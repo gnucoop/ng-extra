@@ -1,10 +1,10 @@
 {
   "firebase": {
-    "apiKey": "AIzaSyBekh5ZSi1vEhaE2qetH4RU91gHmUmpqgg",
+    "apiKey": "AIzaSyCGHtMIuWPtzF0Kx2FWUHssoI6A9HXgkd8",
     "authDomain": "ng-extra-screenshots.firebaseapp.com",
     "databaseURL": "https://ng-extra-screenshots.firebaseio.com",
     "storageBucket": "ng-extra-screenshots.appspot.com",
-    "messagingSenderId": "975527407245"
+    "messagingSenderId": "751002393808"
   },
   "repoSlug": "gnucoop/ng-extra"
 }

@@ -18,6 +18,7 @@ export class FirebaseService {
 
   constructor(private _httpClient: HttpClient) {
     // Initialize Firebase
+    console.log(config.firebase);
     firebase.initializeApp(config.firebase);
 
     firebase.auth().onAuthStateChanged((user: firebase.User) => {
