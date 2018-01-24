@@ -1,0 +1,70 @@
+language: node_js
+sudo: false
+dist: trusty
+
+node_js:
+  - '8'
+
+addons:
+  jwt:
+    # SAUCE_ACCESS_KEY<=secret for FIREBASE_ACCESS_TOKEN to work around travis-ci/travis-ci#7223, unencrypted value in valentine as FIREBASE_ACCESS_TOKEN>
+    # we alias FIREBASE_ACCESS_TOKEN to $SAUCE_ACCESS_KEY in env.sh and set the SAUCE_ACCESS_KEY there
+    - secure: "u4n3FbdvWFpJ7oYgspiC/kQA6Libl2X2+NRCjcHJDQvs8XjqdYVLlgtOmMXpzjwfjwO92hlb2mzzdHg+eZsRPtgo6p7QXIAKy6T37tFP6T6O6iIODfmbaGD4EtnDzp9uCe26M2UvVY8n65SjmmkEpcjysw3jIe92bkC5KICHIc0Bqqy7ok1YwesT8F65BG10E4Vf5XcARVXdXo2bd6GFIKdGWgbpH74YdDl375s6WH6T/+LLVP9ko+Ixj77yh5ymy3H0Mk3bKG/ex12tTbQ7pfNwVGIocVp+S0/rKx/q0bnpULRofSJ0ImRIOJbuyBjSUHTgV4g5utJNOs9mRXGR/fWUzEw/Way4DXpatHuO3gDFjmCczdvp23ks9XnZnB5602wDYsTm9LDwfCOSFpjKt6NUkzgXr4ydLeaKaYlMXjoa3EPk8adOuSGbEadyBjswkQ1poQZgFG9rxYKTTkAeAwT7kVJYyV+EZ6zMi/tM3aY4UkggRB3WWiTV4IlGgMlmHKeI8NuTKA711Hpxz5XNreKaGtdXH9ZxXxXxKzs0/gJzeJHvgMg9xow+Pyc8JBPH4jNjHv04cPAuUxH3NATanrrLswQP5Bejimxg/F/XNMmJRhkS5LUu71+gwW4s0bGiWNSCKCjcWOzRNReEVTrhlGA2M0kU9M543iR7g4yu6iU="
+  chrome: stable
+  firefox: latest
+
+branches:
+  only:
+  - master
+
+jobs:
+  include:
+    - env: "MODE=lint"
+    - env: "MODE=aot"
+    - env: "MODE=payload"
+    - env: "MODE=prerender"
+    # Closure Compiler CI check is temporarily disabled until a new version of
+    # the tool is released with https://github.com/google/closure-compiler/pull/2600
+    # - env: "MODE=closure-compiler"
+    - env: "MODE=e2e"
+    - env: "MODE=saucelabs_required"
+    - env: "MODE=browserstack_required"
+    - env: "MODE=travis_required"
+    - env: "DEPLOY_MODE=build-artifacts"
+    - env: "DEPLOY_MODE=docs-content"
+    - env: "DEPLOY_MODE=screenshot-tool"
+    - env: "DEPLOY_MODE=dashboard"
+env:
+  global:
+  - LOGS_DIR=/tmp/angular-material2-build/logs
+  - SAUCE_USERNAME=angular-ci
+  - BROWSER_STACK_USERNAME=angularteam1
+  - BROWSER_STACK_ACCESS_KEY=BWCd4SynLzdDcv8xtzsB
+  - BROWSER_PROVIDER_READY_FILE=/tmp/angular-material2-build/readyfile
+  - BROWSER_PROVIDER_ERROR_FILE=/tmp/angular-material2-build/errorfile
+
+before_install:
+  - source ./scripts/ci/travis-env.sh
+
+install:
+  - npm install
+
+before_script:
+  - mkdir -p $LOGS_DIR
+
+script:
+  - ./scripts/ci/travis-script.sh
+
+cache:
+  directories:
+    - ./node_modules/
+
+notifications:
+  webhooks:
+    urls:
+      - https://us-central1-test-jperrott.cloudfunctions.net/travisCi
+    on_success: always
+    on_failure: always
+    on_start: always
+    on_cancel: always
+    on_error: always

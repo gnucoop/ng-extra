@@ -9,9 +9,9 @@ set -e -o pipefail
 cd $(dirname $0)/../..
 
 # Build a release of ng-extra, mat-extra and ion-extra packages.
-$(npm bin)/gulp mat-extra:build-release:clean
-$(npm bin)/gulp ion-extra:build-release:clean
 $(npm bin)/gulp ng-extra:build-release:clean
+$(npm bin)/gulp mat-extra:build-release
+$(npm bin)/gulp ion-extra:build-release
 
 # Build demo-app with ES2015 modules. Closure compiler is then able to parse imports.
 $(npm bin)/gulp :build:devapp:assets :build:devapp:scss
@@ -20,7 +20,7 @@ $(npm bin)/tsc -p src/demo-app/tsconfig-build.json --target ES2015 --module ES20
 # Create a list of all RxJS source files.
 rxjsSourceFiles=$(find node_modules/rxjs/ -name '*.js');
 
-# List of entry points in the CDK package. Exclude "testing" since it's not an entry point.
+# List of entry points in the NG-Extra package. Exclude "testing" since it's not an entry point.
 ngExtraEntryPoints=($(find src/ng-extra -maxdepth 1 -mindepth 1 -type d -not -name testing -exec basename {} \;))
 
 OPTS=(
