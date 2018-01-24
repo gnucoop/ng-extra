@@ -11,7 +11,7 @@ cd $(dirname ${0})/../..
 
 if [ -z ${NG_EXTRA_BOARD_FIREBASE_DEPLOY_KEY} ]; then
   echo "Error: No access token for firebase specified." \
-       "Please set the environment variable 'NG_EXTRA_DASHBOARD_ACCESS_TOKEN'."
+       "Please set the environment variable 'NG_EXTRA_BOARD_FIREBASE_DEPLOY_KEY'."
   exit 1
 fi
 
