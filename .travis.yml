@@ -36,12 +36,12 @@ jobs:
     - env: "DEPLOY_MODE=dashboard"
 env:
   global:
-  - LOGS_DIR=/tmp/angular-material2-build/logs
-  - SAUCE_USERNAME=angular-ci
-  - BROWSER_STACK_USERNAME=angularteam1
-  - BROWSER_STACK_ACCESS_KEY=BWCd4SynLzdDcv8xtzsB
-  - BROWSER_PROVIDER_READY_FILE=/tmp/angular-material2-build/readyfile
-  - BROWSER_PROVIDER_ERROR_FILE=/tmp/angular-material2-build/errorfile
+  - LOGS_DIR=/tmp/ng-extra-build/logs
+  - SAUCE_USERNAME=gnucoop
+  - BROWSER_STACK_USERNAME=andreamariaberto1
+  - BROWSER_STACK_ACCESS_KEY=pHs5SpSyBvUWqa1WzNQh
+  - BROWSER_PROVIDER_READY_FILE=/tmp/ng-extra-build/readyfile
+  - BROWSER_PROVIDER_ERROR_FILE=/tmp/ng-extra-build/errorfile
 
 before_install:
   - source ./scripts/ci/travis-env.sh
