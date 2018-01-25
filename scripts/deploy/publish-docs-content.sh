@@ -53,7 +53,7 @@ git clone ${docsContentRepoUrl} ${docsContentPath} --depth 1
 rm -Rf ${docsContentPath}/*
 
 # Create all folders that need to exist in the docs-content repository.
-mkdir ${docsContentPath}/{overview,guides,api,examples,stackblitz,mat-examples-package,ion-examples-package}
+mkdir ${docsContentPath}/{overview,guides,api,examples,stackblitz,mat-extra-examples-package,ion-extra-examples-package}
 
 # Copy API and example files to the docs-content repository.
 cp -R ${docsDistPath}/api/* ${docsContentPath}/api
@@ -62,8 +62,8 @@ cp -r ${docsDistPath}/stackblitz/* ${docsContentPath}/stackblitz
 
 # Copy the @gnucoop/mat-extra-examples and @gnucoop/ion-extra-examples
 # packages to the docs-content repository.
-cp -r ${matExamplesPackagePath}/* ${docsContentPath}/mat-examples-package
-cp -r ${ionExamplesPackagePath}/* ${docsContentPath}/ion-examples-package
+cp -r ${matExamplesPackagePath}/* ${docsContentPath}/mat-extra-examples-package
+cp -r ${ionExamplesPackagePath}/* ${docsContentPath}/ion-extra-examples-package
 
 # Copy the license file to the docs-content repository.
 cp ./LICENSE ${docsContentPath}
